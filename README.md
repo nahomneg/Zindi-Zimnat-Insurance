@@ -26,8 +26,9 @@ Each row is duplicated as many times as the number of ones.
 For each duplicated row in the training set one of the subscribed products is changed to unsubscribed.
 A different product is changed from 1 to 0 on each duplicate of the row.
 Now each row in the training set has one of the subscribed products missing, just like the test set. 
+A number of models are trained and stacked up to make predictions for the test set.
 
-## Models Used
+## Models used for stacking
 - Catboost Classifier with different parameters
 - Random Forest with an n_estimator of 1000
 - LGBM with n_estimators of 150, max_depth of 5 and num_leaves of 31
